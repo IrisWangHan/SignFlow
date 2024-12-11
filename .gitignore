@@ -10,4 +10,4 @@ obj/
 appsettings.json
 
 # 忽略開發環境的設定檔（通常是本地化、個別開發者的設定）
-appsettings.Deveiopment.json
+appsettings.Development.json
