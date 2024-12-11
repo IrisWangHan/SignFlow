@@ -1,0 +1,135 @@
+body {
+    background-image: url('../img/bgc.png');
+    /* 圖片路徑 */
+    background-size: cover;
+    /* 使圖片覆蓋整個背景 */
+    background-repeat: no-repeat;
+    /* 防止圖片重複 */
+    background-position: center;
+    /* 圖片置中 */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 後代選擇器(空格)
+只有當 #account 元素在 #loginContainer 
+這個元素內時，樣式才會生效 */
+#loginContainer,
+#loginContainer #account,
+#loginContainer #password,
+#loginContainer #captcha {
+    display: flex;
+    /* 一起設定flex */
+}
+
+#loginContainer {
+    width: 70%;
+    max-width: 420px;
+    height: 380px;
+    background-color: var(--blue-sky);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+/* 設定每個 帳號/密碼區塊 
+彈性寬度以外層loginContainer的75%調整  */
+#loginContainer #account,
+#loginContainer #password,
+#loginContainer #captcha,
+#loginContainer #sso {
+    width: 75%;
+    height: 55px;
+
+}
+
+img {
+    display: block;
+}
+
+/* 藍色背景小圖示區塊 */
+.imgbox {
+    width: 45px;
+    height: 45px;
+    background-color: var(--blue-viole);
+    position: relative;
+    /* 讓小圖片定位 */
+    border-radius: 7px 0px 0px 7px;
+    /* 左上/右上/右下/左下 */
+}
+
+/* 控制input中的小圖示 */
+.imgbox img {
+    height: 30px;
+    /* 確保高度也設為 100% */
+    object-fit: contain;
+    /* 保持圖片比例並填滿容器 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 使圖片精確居中 */
+    /* 讓圖片在背景色之上 */
+}
+
+#sso {
+    color: var(--text-gray);
+}
+
+#sso img {
+    height: 30px;
+    display: inline-block;
+    /* 讓圖片與文字置於同一行 */
+    vertical-align: middle;
+    /* 讓圖片跟文字上下置中 */
+}
+
+#sso span {
+    vertical-align: middle;
+    /* 讓圖片跟文字上下置中 */
+}
+
+#password {
+    position: relative;
+}
+
+/* 記住我 position*/
+#password label {
+    position: absolute;
+    bottom: -15px;
+    /* top: 0px; */
+
+}
+
+/* 驗證碼與上方保持距離 */
+#sso,
+#captcha,
+button {
+    margin-top: 30px;
+}
+
+/* 讓驗證碼自動換行 */
+#captcha {
+    flex-wrap: wrap;
+
+}
+
+#captcha>img {
+    margin: 0px 10px;
+    width: 70px;
+    height: 45px;
+}
+
+input[type="text"] {
+    /* width: 100%; */
+    flex: 1;
+    height: 45px;
+    border-radius: 0px 7px 7px 0px;
+    border: 1px var(--gray-slate) solid;
+    box-sizing: border-box;
+
+}

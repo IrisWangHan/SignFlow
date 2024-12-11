@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,45 @@
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/reset.css">
 </head>
+
 <body>
-    
+    <img src="../img/WH表單簽核系統圖片.png" alt="">
+    <div id="loginContainer">
+        <div id="account">
+            <div class="imgbox">
+                <img src="../img/user圖片.png" alt="">
+            </div>
+            <input type="text" placeholder=" 請輸入帳號">
+        </div>
+        <div id="password">
+            <div class="imgbox">
+                <img src="../img/lock圖片.png" alt="">
+            </div>
+            <input type="text" placeholder=" 請輸入密碼">
+            <label>
+                <input type="checkbox" name="">
+                記住我
+            </label>
+        </div>
+
+        <div id="captcha">
+            <div class="imgbox">
+                <img src="../img/驗證碼圖片.png" alt="">
+            </div>
+            <input type="text" name="" id="" placeholder=" 驗證碼">
+            <img src="../img/假驗證碼圖片.png" alt="">
+        </div>
+
+        <div id="sso">
+            <p>或者使用以下登入:</p>
+            <img src="../img/google(G)圖片.png" alt="">
+            <span>google</span>
+        </div>
+
+    </div>
+    <button class="btn">登入</button>
 
     <script src="../js/login.js"></script>
 </body>
+
 </html>
