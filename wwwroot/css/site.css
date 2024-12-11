@@ -1,0 +1,66 @@
+/*確保內容不擴張
+高度100% 讓內容高度填滿視窗*/
+html,
+body {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+/*定義共用色號
+--blue-sky 淡藍色 登入頁輸入區背景
+--blue-viole 藍紫色
+--gray-slate 石灰色
+
+--text-gray 文字灰色
+*/
+:root {
+    --blue-sky: #EAF7FF;
+    --blue-viole: rgba(57, 121, 193, 0.4);
+
+    --gray-slate: #B5AEAE;
+
+    --text-gray: #827D7D;
+    /*按鈕*/
+    /* --submitbtn: #0B78FF; */
+    --submitbtn: #007bff;
+
+    /* --secondary-bg-color: #FFD700; */
+    /* --text-color: #333333; */
+    --gray-placeholder: #D1C8C8;
+}
+
+.btn {
+
+    background-color: var(--submitbtn);
+    color: white;
+    /* 白色文字 */
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    /* 去掉邊框 */
+    font-weight: bolder;
+    cursor: pointer;
+    /* 當滑鼠懸停時，顯示指標 */
+    transition: background-color 0.3s ease;
+    /* 添加過渡效果 */
+}
+
+.btn-short {
+    width: 90px;
+    height: 35px;
+}
+
+.btn-long {
+    width: 65%;
+    height: 35px;
+}
+
+input::placeholder {
+    color: var(--gray-placeholder);
+    font-weight: 500;
+    /* #B5AEAE 調淡為半透明 */
+}
+
+input {
+    border-radius: 5px;
+}

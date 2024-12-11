@@ -1,8 +1,21 @@
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+if (builder.Environment.IsDevelopment())
+{
+    builder.Services.AddControllersWithViews()
+                    .AddRazorRuntimeCompilation();
+}
+else
+{
+    builder.Services.AddControllersWithViews();
+}
+// builder.Services.AddControllersWithViews();
+// builder.Services.AddControllersWithViews()
+//                 .AddRazorRuntimeCompilation(); // 啟用 MVC 與 Razor 頁面的即時編譯
 
+// builder.Services.AddRazorPages()
+//                 .AddRazorRuntimeCompilation(); // 啟用 Razor Pages 即時編譯
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -22,6 +35,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Login}/{action=Index}/{id?}");
+    pattern: "{controller=Login}/{action=Login}/{id?}");
 
 app.Run();

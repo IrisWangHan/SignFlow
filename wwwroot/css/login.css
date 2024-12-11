@@ -28,12 +28,17 @@ body {
 #loginContainer {
     width: 70%;
     max-width: 420px;
-    height: 380px;
+    height: 400px;
     background-color: var(--blue-sky);
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: space-between; */
     align-items: center;
     border-radius: 10px;
+    position: relative;
+}
+
+#loginContainer>img {
+    width: 65%;
 }
 
 /* 設定每個 帳號/密碼區塊 
@@ -42,39 +47,91 @@ body {
 #loginContainer #password,
 #loginContainer #captcha,
 #loginContainer #sso {
-    width: 75%;
-    height: 55px;
-
+    width: 65%;
+    height: 35px;
+    margin: 0px 0px 20px 0px;
+    box-sizing: border-box;
 }
+
 
 img {
     display: block;
 }
 
-/* 藍色背景小圖示區塊 */
-.imgbox {
-    width: 45px;
-    height: 45px;
-    background-color: var(--blue-viole);
+
+/* 讓小圖片定位 */
+#account,
+#password {
     position: relative;
-    /* 讓小圖片定位 */
-    border-radius: 7px 0px 0px 7px;
-    /* 左上/右上/右下/左下 */
+    border-radius: 5px;
+    background-color: #FFFFFF;
 }
 
-/* 控制input中的小圖示 */
-.imgbox img {
-    height: 30px;
-    /* 確保高度也設為 100% */
+/* 設定input中的小圖片 */
+#account>img,
+#password>img {
+    position: absolute;
+    height: 20px;
     object-fit: contain;
     /* 保持圖片比例並填滿容器 */
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 20px;
     transform: translate(-50%, -50%);
-    /* 使圖片精確居中 */
-    /* 讓圖片在背景色之上 */
 }
+
+/* 設定input */
+#account>input[type="text"],
+#password>input[type="text"] {
+    width: 100%;
+    height: 35px;
+    border: 2px var(--gray-slate) solid;
+    box-sizing: border-box;
+    padding-left: 30px;
+    /* 放小圖片預留空間 */
+}
+
+/* 點選input框變色 */
+#account>input[type="text"]:focus,
+#password>input[type="text"]:focus,
+#captcha>input[type="text"]:focus {
+    border: 2px var(--submitbtn) solid;
+    outline: none;
+    /* 去掉默認的焦點輪廓 */
+}
+
+/* 記住我 position*/
+#password label {
+    position: absolute;
+    bottom: -20px;
+    right: 0px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    color: var(--text-gray);
+    /* top: 0px; */
+
+}
+
+
+
+#captcha>input[type="text"] {
+    width: 100px;
+    height: 100%;
+    border: 1px var(--gray-slate) solid;
+    border-radius: 5px;
+
+}
+
+#captcha>img {
+    margin: 0px 10px;
+    width: 100px;
+    height: 100%;
+}
+
+
+
+
 
 #sso {
     color: var(--text-gray);
@@ -93,43 +150,7 @@ img {
     /* 讓圖片跟文字上下置中 */
 }
 
-#password {
-    position: relative;
-}
-
-/* 記住我 position*/
-#password label {
-    position: absolute;
-    bottom: -15px;
-    /* top: 0px; */
-
-}
-
-/* 驗證碼與上方保持距離 */
-#sso,
-#captcha,
 button {
-    margin-top: 30px;
-}
-
-/* 讓驗證碼自動換行 */
-#captcha {
-    flex-wrap: wrap;
-
-}
-
-#captcha>img {
-    margin: 0px 10px;
-    width: 70px;
-    height: 45px;
-}
-
-input[type="text"] {
-    /* width: 100%; */
-    flex: 1;
-    height: 45px;
-    border-radius: 0px 7px 7px 0px;
-    border: 1px var(--gray-slate) solid;
-    box-sizing: border-box;
-
+    position: absolute;
+    bottom: 20px;
 }

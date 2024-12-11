@@ -13,9 +13,9 @@ public class LoginController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+    public IActionResult Login()
     {
-        return View("Login");
+        return View();
     }
 
     public IActionResult Privacy()
