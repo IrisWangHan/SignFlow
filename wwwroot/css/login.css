@@ -28,17 +28,19 @@ body {
 #loginContainer {
     width: 70%;
     max-width: 420px;
-    height: 400px;
+    height: 450px;
     background-color: var(--blue-sky);
     flex-direction: column;
-    /* justify-content: space-between; */
     align-items: center;
     border-radius: 10px;
     position: relative;
 }
 
+
+/* logo */
 #loginContainer>img {
-    width: 65%;
+    width: 85%;
+    margin: 15px 0px;
 }
 
 /* 設定每個 帳號/密碼區塊 
@@ -87,7 +89,7 @@ img {
     height: 35px;
     border: 2px var(--gray-slate) solid;
     box-sizing: border-box;
-    padding-left: 30px;
+    padding-left: 25px;
     /* 放小圖片預留空間 */
 }
 
@@ -113,32 +115,42 @@ img {
 
 }
 
-
+#loginContainer #captcha {
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
 
 #captcha>input[type="text"] {
-    width: 100px;
+    flex: 1;
+    /* width: 100px; */
     height: 100%;
     border: 1px var(--gray-slate) solid;
     border-radius: 5px;
+    min-width: 100px;
+    /* 最小寬度 */
+    max-width: 500px;
+    /* 最大寬度 */
 
 }
 
 #captcha>img {
-    margin: 0px 10px;
+    margin: 5px 10px;
     width: 100px;
-    height: 100%;
+    height: 25px;
 }
 
 
 
 
 
-#sso {
+#loginContainer #sso {
+    margin-top: 20px;
     color: var(--text-gray);
+    font-size: 12px;
 }
 
 #sso img {
-    height: 30px;
+    height: 20px;
     display: inline-block;
     /* 讓圖片與文字置於同一行 */
     vertical-align: middle;

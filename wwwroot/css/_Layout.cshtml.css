@@ -9,4 +9,9 @@ header {
   background-color: #b05c5c;
   border: 1px;
   color: #b05c5c;
+  padding: 0px 10px;
+}
+
+header img {
+  height: 100%;
 }
