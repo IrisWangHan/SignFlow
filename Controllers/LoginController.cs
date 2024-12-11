@@ -15,7 +15,7 @@ public class LoginController : Controller
 
     public IActionResult Index()
     {
-        return View();
+        return View("Login");
     }
 
     public IActionResult Privacy()
