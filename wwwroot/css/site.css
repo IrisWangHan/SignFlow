@@ -23,34 +23,53 @@ body {
     /*按鈕*/
     /* --submitbtn: #0B78FF; */
     --submitbtn: #007bff;
-
+    --submitbtn2: #0056b3;
+    --logoutbtn: #FF4C4C;
+    --logoutbtn2: #d72626;
     /* --secondary-bg-color: #FFD700; */
     /* --text-color: #333333; */
     --gray-placeholder: #D1C8C8;
+    --gray-footer: #E0E0E0
 }
 
 .btn {
-
-    background-color: var(--submitbtn);
     color: white;
     /* 白色文字 */
-    font-size: 16px;
     border-radius: 5px;
     border: none;
     /* 去掉邊框 */
-    font-weight: bolder;
+    font-weight: 600;
     cursor: pointer;
     /* 當滑鼠懸停時，顯示指標 */
     transition: background-color 0.3s ease;
     /* 添加過渡效果 */
 }
 
+.btn-sbmit {
+    background-color: var(--submitbtn);
+}
+
+.btn-sbmit:hover {
+    background-color: var(--submitbtn2);
+}
+
+
+.btn-logout {
+    background-color: var(--logoutbtn);
+}
+
+.btn-logout:hover {
+    background-color: var(--logoutbtn2);
+}
+
 .btn-short {
-    width: 90px;
-    height: 35px;
+    font-size: 14px;
+    width: 65px;
+    height: 30px;
 }
 
 .btn-long {
+    font-size: 16px;
     width: 65%;
     height: 35px;
 }
