@@ -1,0 +1,13 @@
+# 忽略 VSCode 的本地設定目錄
+.vscode/
+
+# 忽略編譯後的輸出目錄
+bin/
+obj/
+
+# 忽略應用程式的主要設定檔
+# 如果 appsettings.json 不包含敏感資料，並且對所有開發者一致，可以選擇移除此規則
+appsettings.json
+
+# 忽略開發環境的設定檔（通常是本地化、個別開發者的設定）
+appsettings.Deveiopment.json
