@@ -73,9 +73,9 @@
 
 }
 
-/* .content ul li select :active {
+.content ul li select :active {
     border: 2px var(--submitbtn) solid;
     outline: none;
-} */
+}
 
 /* .content ul li span {} */

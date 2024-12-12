@@ -26,7 +26,7 @@ body {
     /*按鈕*/
     /* --submitbtn: #0B78FF; */
     --submitbtn: #007bff;
-    --submitbtn2: #0056b3;
+    --submitbtn2: #339dff;
     --logoutbtn: #FF4C4C;
     --logoutbtn2: #d72626;
     /* --secondary-bg-color: #FFD700; */
@@ -40,6 +40,20 @@ body {
     --menu-active: #1780f7;
     --table-title-blue: #4669ab;
     --web-blue: #223a5e;
+
+
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-xxl: 1440px;
 }
 
 .btn {
@@ -61,8 +75,13 @@ body {
 
 .btn-submit:hover {
     background-color: var(--submitbtn2);
+
 }
 
+.btn-submit:active {
+    background-color: var(--submitbtn);
+    color: var(--text-gray);
+}
 
 .btn-logout {
     background-color: var(--logoutbtn);
@@ -80,9 +99,10 @@ body {
 
 .btn-long {
     font-size: 16px;
-    width: 65%;
+    width: 100%;
     height: 35px;
 }
+
 
 input::placeholder {
     color: var(--gray-placeholder);
@@ -90,9 +110,29 @@ input::placeholder {
     /* #B5AEAE 調淡為半透明 */
 }
 
-input {
-    border-radius: 5px;
+/* 點選input框變色 */
+input:focus {
+    border: 2px var(--submitbtn) solid;
+    outline: none;
+    /* 去掉默認的焦點輪廓 */
 }
+
+/* 設計input */
+.field-input {
+    width: 100%;
+    min-width: 100px;
+    max-width: 500px;
+    height: 45px;
+    border: 2px var(--gray-slate) solid;
+    box-sizing: border-box;
+    color: var(--text-gray);
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 11px;
+}
+
+
+
 
 .menutitle-desktop {
     font-size: large;

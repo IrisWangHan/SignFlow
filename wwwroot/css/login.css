@@ -7,12 +7,16 @@ body {
     /* 防止圖片重複 */
     background-position: center;
     /* 圖片置中 */
+
+    background: linear-gradient(135deg, #223a5e, #4a90e2);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
+
 
 /* 後代選擇器(空格)
 只有當 #account 元素在 #loginContainer 
@@ -26,10 +30,12 @@ body {
 }
 
 #loginContainer {
-    width: 70%;
-    max-width: 420px;
-    height: 470px;
-    background-color: var(--blue-sky);
+    width: 80%;
+    max-width: 620px;
+    height: auto;
+    padding: 40px 60px;
+    box-sizing: border-box;
+    background-color: var(--web-blue);
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
@@ -41,19 +47,25 @@ body {
 /* logo */
 #loginContainer>img {
     width: 100%;
-    margin-bottom: 25px;
+    max-width: 315px;
+    /* 限制圖片的最大寬度 */
+    height: auto;
+    /* 高度根據寬度自動調整，保持比例 */
+    /* width: 100%; */
+    margin-bottom: 10px;
     border-radius: 10px 10px 0px 0px;
 
 }
 
 /* 設定每個 帳號/密碼區塊 
-彈性寬度以外層loginContainer的75%調整  */
+彈性寬度以外層loginContainer的75%調整 
+高度 設計跟input等高 */
 #loginContainer #account,
 #loginContainer #password,
 #loginContainer #captcha,
 #loginContainer #sso {
-    width: 65%;
-    height: 35px;
+    width: 100%;
+    height: 45px;
     margin: 0px 0px 20px 0px;
     box-sizing: border-box;
 }
@@ -76,45 +88,36 @@ img {
 #account>img,
 #password>img {
     position: absolute;
-    height: 20px;
+    height: 25px;
     object-fit: contain;
     /* 保持圖片比例並填滿容器 */
     position: absolute;
     top: 50%;
     left: 20px;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -35%);
 }
 
-/* 設定input */
-#account>input[type="text"],
-#password>input[type="text"] {
-    width: 100%;
-    height: 35px;
-    border: 2px var(--gray-slate) solid;
-    box-sizing: border-box;
+/* 設定input  帳號和密碼*/
+input[type="password"] {
     padding-left: 40px;
-    color: var(--text-gray);
     /* 放小圖片預留空間 */
 }
 
-/* 點選input框變色 */
-#account>input[type="text"]:focus,
-#password>input[type="text"]:focus,
-#captcha>input[type="text"]:focus {
-    border: 2px var(--submitbtn) solid;
-    outline: none;
-    /* 去掉默認的焦點輪廓 */
+/* 驗證碼 */
+input[type="text"] {
+    flex: 1;
 }
+
 
 /* 記住我 position*/
 #password label {
     position: absolute;
-    bottom: -20px;
+    bottom: -35px;
     right: 0px;
     font-size: 12px;
     display: flex;
     justify-content: center;
-    color: var(--text-gray);
+    color: #FFFFFF;
     /* top: 0px; */
 
 }
@@ -124,32 +127,24 @@ img {
     flex-wrap: wrap;
 }
 
-#captcha>input[type="text"] {
-    flex: 1;
-    /* width: 100px; */
-    height: 100%;
-    border: 1px var(--gray-slate) solid;
-    border-radius: 5px;
-    min-width: 100px;
-    /* 最小寬度 */
-    max-width: 500px;
-    /* 最大寬度 */
-
-}
 
 #captcha>img {
-    margin: 5px 10px;
-    width: 100px;
-    height: 25px;
+    margin: 0px 10px;
+    width: 150px;
+    height: 100%;
 }
 
+
+#captcha>input {
+    text-align: center;
+}
 
 
 
 
 #loginContainer #sso {
     margin-top: 20px;
-    color: var(--text-gray);
+    color: #FFFFFF;
     font-size: 12px;
 }
 
@@ -166,7 +161,8 @@ img {
     /* 讓圖片跟文字上下置中 */
 }
 
-button {
-    position: absolute;
+/* button {
+    position: fixed;
     bottom: 20px;
-}
+
+} */
