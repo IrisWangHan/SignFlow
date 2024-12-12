@@ -92,7 +92,8 @@ img {
     height: 35px;
     border: 2px var(--gray-slate) solid;
     box-sizing: border-box;
-    padding-left: 25px;
+    padding-left: 40px;
+    color: var(--text-gray);
     /* 放小圖片預留空間 */
 }
 
