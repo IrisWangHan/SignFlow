@@ -1,0 +1,58 @@
+#body-container,
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    box-sizing: border-box;
+}
+
+#body-container {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    width: 100%;
+    max-width: 1200px;
+    height: 65%;
+    border-radius: 10px;
+    background-color: var(--web-blue);
+
+
+}
+
+
+.content h2 {
+    text-align: center;
+    color: white;
+    font-size: clamp(1rem, 5vw, 4rem);
+    margin-bottom: 20px;
+}
+
+.tips {
+    width: 400px;
+    /* height: 180px; */
+    /* background-color: bisque; */
+
+}
+
+.tips ol {
+    margin: 0;
+    /* 去除外邊距 */
+    padding-left: 60px;
+    /* 控制數字與文字的位置 */
+}
+
+.tips p {
+    color: #cccccc;
+    font-size: clamp(16px, 5vw, 24px);
+}
+
+
+
+.tips li {
+    font-size: clamp(16px, 5vw, 24px);
+    color: #aaaaaa;
+}
