@@ -19,6 +19,10 @@
 <body>
     <header>
         <img src="~/img/logo2.gif" alt="">
+        <div id="bellbox">
+            <img src="~/img/bell2.gif" alt="">
+            <span>+</span>
+        </div>
         @* <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SignFlow</a>
@@ -43,18 +47,55 @@
     <div id="container">
         <nav>
             <div id="menu">
-                <div id="userinfo">
-                    <span>登入身分:</span>
-<img src="~/img/" alt="">
+                <div id="userinfo" class="text-desktop">
+                    <img src="~/img/user圖片.png" alt="">
+                    <span>登入身分:XXX</span>
+                    <p>王XX你好</p>
                 </div>
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>
+                        <h3>管理者設定</h3>
+                        <ul class="text-desktop">
+                            <li>
+                                <img src="~/img/房子圖片.png" alt="初始設定圖示">
+                                初始設定
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>表單申請區</h3>
+                        <ul class="text-desktop">
+                            <li>
+                                <img src="~/img/drafts.gif" alt="草稿區圖示">
+                                草稿區
+                            </li>
+                            <li>
+                                <img src="~/img/apply.gif" alt="表單申請狀態圖示">
+                                表單申請狀態
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>表單簽核區</h3>
+                        <ul class="text-desktop">
+                            <li>
+                                <img src="~/img/sign.gif" alt="待簽核表單圖示">
+                                待簽核表單
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>操作</h3>
+                        <ul class="text-desktop ">
+                            <li class="menulogout">
+                                <img src="~/img/logout.gif" alt="">
+                                登出 (Logout)
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
-                <button class="btn btn-short btn-logout"> 登出</button>
+
+                @* <button class="btn btn-short btn-logout"> 登出</button> *@
 
             </div>
             <footer>

@@ -4,53 +4,179 @@ body {
   height: 100%;
 }
 
+/* 設定header大小 */
 header {
   width: 100%;
-  height: 50px;
+  height: 60px;
   color: hsl(0, 35%, 53%);
+  position: relative;
+  border-bottom: 2px var(--gray-footer) solid;
 }
 
-header img {
+/* 設定header-logo */
+header>img {
   height: 100%;
+  cursor: pointer;
 }
 
+/* 鈴鐺背景 */
+#bellbox {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: middle;
+  /* 置中裡面的span(行內元素) */
+  position: absolute;
+  top: 15px;
+  left: 220px;
+  /* 到時候文字提示訊息會定位在紅色圈圈 */
+
+}
+
+#bellbox:hover {
+  transform: scale(1.1);
+}
+
+/* 鈴鐺圖片 */
+#bellbox img {
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 鈴鐺訊息顯示區 */
+#bellbox span {
+  font-size: 8px;
+  position: absolute;
+  right: 7px;
+  top: 4px;
+  color: #ffffff;
+}
+
+/* nav */
 #container {
   display: flex;
   width: 100%;
-  height: calc(100% - 50px);
-}
-
-
-
-main {
-  flex: 1;
-  background-color: blueviolet;
+  height: calc(100% - 60px);
 }
 
 nav {
   width: 250px;
-  background-color: rgb(239, 184, 116);
+  border-right: 2px var(--gray-footer) solid;
   position: relative;
+
+  /* 給footer使用 */
 }
 
-nav #menu {
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-}
 
-nav #menu button {
-  background-color: var(--logoutbtn);
-  position: absolute;
-  bottom: 90px;
-}
 
-nav footer {
+footer {
   width: 100%;
   height: 70px;
   background-color: var(--gray-footer);
   color: var(--text-gray);
   position: absolute;
   bottom: 0px;
+  font-size: 12px;
+}
+
+#userinfo {
+  width: 100%;
+  height: 150px;
+  margin: 15px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #b4cdea;
+  border-radius: 25px;
+  box-sizing: border-box;
+}
+
+
+
+/* 指定user圖 > 不影響到鈴鐺img */
+#userinfo>img {
+  width: 120px;
+}
+
+
+
+#menu {
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px 10px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* #menu button {
+  position: absolute;
+  bottom: 90px;
+  right: 10px;
+} */
+
+/* 導覽列的三個分類選單 */
+#menu ul {
+  width: 100%;
+  height: 70%;
+  list-style: none;
+  box-sizing: border-box;
+  /* 避免第二層ul突出 */
+}
+
+#menu ul li h3 {
+  font-weight: 700;
+  /* 比正常稍微粗一點 */
+  font-size: 1.2rem;
+  /* 可視需要調整字體大小 */
+  /* color: aqua; */
+}
+
+/* 導覽列的類別下各選單 */
+#menu ul li ul {
+  width: 100%;
+  border-top: 1px var(--border-gray) solid;
+}
+
+#menu ul li ul li:hover {
+  background-color: var(--menu-hover);
+  border-radius: 5px;
+  color: white;
+
+}
+
+#menu ul li ul li:active {
+  background-color: var(--menu-active);
+}
+
+
+#menu ul li ul li {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin: 10px 0px;
+  cursor: pointer;
+  padding-left: 35px;
+
+}
+
+
+#menu ul li ul li img {
+  height: 50%;
+}
+
+
+
+
+
+
+/* main */
+main {
+  flex: 1;
+  /* background-color: blueviolet; */
 }

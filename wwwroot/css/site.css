@@ -4,6 +4,8 @@ html,
 body {
     box-sizing: border-box;
     height: 100%;
+    font-family: 微軟正黑體, 新細明體, serif, sans-serif, cursive;
+
 }
 
 /*定義共用色號
@@ -19,6 +21,7 @@ body {
 
     --gray-slate: #B5AEAE;
 
+    --border-gray: #B5AEAE;
     --text-gray: #827D7D;
     /*按鈕*/
     /* --submitbtn: #0B78FF; */
@@ -29,7 +32,13 @@ body {
     /* --secondary-bg-color: #FFD700; */
     /* --text-color: #333333; */
     --gray-placeholder: #D1C8C8;
-    --gray-footer: #E0E0E0
+    --gray-footer: #E0E0E0;
+
+
+    --menu-blue: #e8ecf5;
+    --menu-hover: #2589fd;
+    --menu-active: #1780f7;
+    --table-title-blue: #4669ab;
 }
 
 .btn {
@@ -45,11 +54,11 @@ body {
     /* 添加過渡效果 */
 }
 
-.btn-sbmit {
+.btn-submit {
     background-color: var(--submitbtn);
 }
 
-.btn-sbmit:hover {
+.btn-submit:hover {
     background-color: var(--submitbtn2);
 }
 
@@ -82,4 +91,29 @@ input::placeholder {
 
 input {
     border-radius: 5px;
+}
+
+.menutitle-desktop {
+    font-size: large;
+}
+
+.menulogout {
+    border: 1px #D1C8C8 solid;
+    color: rgb(207, 7, 7);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.text-desktop {
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+.text-tablet {
+    font-size: 18px;
+}
+
+.text-phone {
+    font-size: 20px;
 }
