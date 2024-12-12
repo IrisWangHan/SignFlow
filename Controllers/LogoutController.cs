@@ -4,18 +4,22 @@ using SignFlow.Models;
 
 namespace SignFlow.Controllers;
 
-public class LoginController : Controller
+public class LogoutController : Controller
 {
     private readonly ILogger<HomeController> _logger;
 
-    public LoginController(ILogger<HomeController> logger)
+    public LogoutController(ILogger<HomeController> logger)
     {
         _logger = logger;
     }
 
     public IActionResult Index()
     {
-        return View();
+        // 在這裡處理登出邏輯
+        // 例如清除 session 或 cookies
+
+        // 重定向到 Login 頁面（假設 Login 頁面是 /Login/Index）
+        return Redirect("/Login/Index");
     }
 
 

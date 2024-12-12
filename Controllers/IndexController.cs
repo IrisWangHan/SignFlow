@@ -15,7 +15,7 @@ public class IndexController : Controller
 
     public IActionResult Index()
     {
-        return View("index");
+        return View();
     }
 
     public IActionResult Privacy()

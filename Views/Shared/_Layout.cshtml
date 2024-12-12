@@ -37,8 +37,10 @@
                         <h3>管理者設定</h3>
                         <ul class="text-desktop">
                             <li>
-                                <img src="~/img/房子圖片.png" alt="初始設定圖示">
-                                初始設定
+                                <a asp-controller="Setting" asp-action="Index">
+                                    <img src="~/img/房子圖片.png" alt="初始設定圖示">
+                                    初始設定
+                                </a>
                             </li>
                         </ul>
                     </li>
@@ -46,12 +48,16 @@
                         <h3>表單申請區</h3>
                         <ul class="text-desktop">
                             <li>
-                                <img src="~/img/drafts.gif" alt="草稿區圖示">
-                                草稿區
+                                <a asp-controller="Drafts" asp-action="Index">
+                                    <img src="~/img/drafts.gif" alt="草稿區圖示">
+                                    草稿區
+                                </a>
                             </li>
                             <li>
-                                <img src="~/img/apply.gif" alt="表單申請狀態圖示">
-                                表單申請狀態
+                                <a asp-controller="Status" asp-action="Index">
+                                    <img src="~/img/apply.gif" alt="表單申請狀態圖示">
+                                    表單申請狀態
+                                </a>
                             </li>
                         </ul>
                     </li>
@@ -59,20 +65,25 @@
                         <h3>表單簽核區</h3>
                         <ul class="text-desktop">
                             <li>
-                                <img src="~/img/sign.gif" alt="待簽核表單圖示">
-                                待簽核表單
+                                <a asp-controller="Sign" asp-action="Index">
+                                    <img src="~/img/sign.gif" alt="待簽核表單圖示">
+                                    待簽核表單
+                                </a>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <h3>操作</h3>
-                        <ul class="text-desktop ">
+                        <ul class="text-desktop">
                             <li class="menulogout">
-                                <img src="~/img/logout.gif" alt="">
-                                登出 (Logout)
+                                <a asp-controller="Logout" asp-action="Index">
+                                    <img src="~/img/logout.gif" alt="">
+                                    登出 (Logout)
+                                </a>
                             </li>
                         </ul>
                     </li>
+
                 </ul>
 
                 @* <button class="btn btn-short btn-logout"> 登出</button> *@
