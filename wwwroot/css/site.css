@@ -32,7 +32,7 @@ body {
     /* --secondary-bg-color: #FFD700; */
     /* --text-color: #333333; */
     --gray-placeholder: #D1C8C8;
-    --gray-footer: #E0E0E0;
+    --gray-footer: #223a5e;
 
 
     --menu-blue: #e8ecf5;
@@ -98,12 +98,35 @@ input {
     font-size: large;
 }
 
-.menulogout {
+.menu-logout {
+    padding: 0%;
     border: 1px #D1C8C8 solid;
-    color: rgb(207, 7, 7);
     border-radius: 5px;
-    text-align: center;
+    color: rgb(207, 7, 7);
+    width: 90%;
+    /* display: flex;
+    justify-content: flex-start; */
+    box-sizing: border-box;
+    margin: 5px;
+    /* padding-left: 30px; */
 }
+
+.menu-logout img,
+.menu-logout span {
+    /* margin-left: ; */
+    transform: translateX(45px);
+}
+
+.footerClass {
+    width: 100%;
+    height: 55px;
+    background-color: var(--gray-footer);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .text-desktop {
     font-size: 14px;

@@ -4,6 +4,8 @@ body {
   height: 100%;
 }
 
+
+
 /* 設定header大小 */
 header {
   width: 100%;
@@ -12,11 +14,13 @@ header {
   position: relative;
   border-bottom: 2px var(--gray-footer) solid;
   background-color: var(--web-blue);
+  box-sizing: border-box;
+  padding: 0px 15px;
 
 }
 
 /* 設定header-logo */
-header>img {
+header a>img {
   height: 100%;
   cursor: pointer;
 }
@@ -31,7 +35,7 @@ header>img {
   /* 置中裡面的span(行內元素) */
   position: absolute;
   top: 0px;
-  left: 200px;
+  left: 260px;
   /* 到時候文字提示訊息會定位在紅色圈圈 */
 }
 
@@ -66,6 +70,7 @@ header>img {
 
 nav {
   min-width: 250px;
+  width: 300px;
   border-right: 2px var(--gray-footer) solid;
   position: relative;
 
@@ -75,10 +80,6 @@ nav {
 
 
 footer {
-  width: 100%;
-  height: 70px;
-  background-color: var(--gray-footer);
-  color: var(--text-gray);
   position: absolute;
   bottom: 0px;
   font-size: 12px;
@@ -88,6 +89,7 @@ footer {
   width: 100%;
   height: 150px;
   margin: 15px 0px;
+  padding: 10px 0px 15px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,19 +105,21 @@ footer {
 #userinfo>img {
   width: 70px;
   border-radius: 50%;
-  margin: 15px;
+  margin: 10px;
 }
 
 
 
 #menu {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 80px);
   padding: 10px 20px 10px 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: auto;
+  /* 啟用滾動條 */
 }
 
 /* #menu button {
@@ -130,21 +134,24 @@ footer {
   height: 70%;
   list-style: none;
   box-sizing: border-box;
+
+
   /* 避免第二層ul突出 */
 }
 
 #menu ul li h3 {
   font-weight: 700;
   /* 比正常稍微粗一點 */
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   /* 可視需要調整字體大小 */
-  /* color: aqua; */
+  color: var(--text-gray);
 }
 
 /* 導覽列的類別下各選單 */
 #menu ul li ul {
   width: 100%;
   border-top: 1px var(--border-gray) solid;
+  margin: 5px 0px 25px 0px;
 }
 
 #menu ul li ul li:hover {
@@ -163,9 +170,9 @@ footer {
   display: flex;
   align-items: center;
   height: 40px;
-  margin: 10px 0px;
+  margin: 5px;
   cursor: pointer;
-  padding-left: 35px;
+  padding-left: 20px;
 
 }
 
@@ -175,8 +182,9 @@ footer {
 }
 
 #menu ul li ul li img {
-  height: 100%;
+  height: 50%;
 }
+
 
 
 

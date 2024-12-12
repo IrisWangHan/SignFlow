@@ -4,7 +4,41 @@
 }
 
 
+<div id="body-container">
+    <div class="content text-desktop">
+        <h2>單筆新增</h2>
+        <div class="content">
+            <ul>
+                <li>
+                    <span>簽核層級</span>
+                    <select id="levelSelect" onchange="updateOptions('Type', 'categorySelect')">
+                        <option value="">請選擇層級</option>
+                    </select>
+                </li>
+                <li>
+                    <span>簽核類別</span>
+                    <select id="categorySelect">
+                        <option value="">請選擇類別</option>
 
+                    </select>
+                </li>
+                <li>
+                    <span>簽核細項</span>
+                    <select id="levelSelect" onchange="updateOptions('Type', 'categorySelect')">
+                        <option value="">請選擇細項</option>
+                    </select>
+                </li>
+                <li>
+                    <span>優先級</span>
+                    <select id="categorySelect">
+                        <option value="">請選擇優先等級</option>
+                    </select>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
 
 
 

@@ -1,0 +1,81 @@
+#body-container,
+.content,
+.content ul,
+.content ul li,
+.content ul li span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#body-container {
+    width: 100%;
+    height: 100%;
+    padding: 0px 20px;
+
+    flex-direction: column;
+}
+
+.content {
+    width: 90%;
+    height: 100%;
+    background-color: antiquewhite;
+    padding: 0px 20px;
+
+    flex-direction: column;
+
+}
+
+.content ul {
+    list-style: none;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    background-color: aquamarine;
+}
+
+/* 各下拉選單 */
+.content ul li {
+
+    margin-bottom: 10px;
+    width: 400px;
+    height: 40px;
+    display: flex;
+    border-radius: 5px;
+    position: relative;
+}
+
+.content ul li span {
+    width: 100px;
+    height: 100%;
+    color: white;
+    background-color: var(--web-blue);
+    border-radius: 5px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 文字垂直水平置中 */
+    position: absolute;
+    top: auto;
+    left: 0px;
+    /* 文字框定位在li的開頭 */
+
+}
+
+.content ul li select {
+    flex: 1;
+    height: 100%;
+    outline: none;
+    box-sizing: border-box;
+    padding-left: 110px;
+
+}
+
+/* .content ul li select :active {
+    border: 2px var(--submitbtn) solid;
+    outline: none;
+} */
+
+/* .content ul li span {} */
