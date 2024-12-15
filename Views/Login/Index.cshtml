@@ -19,20 +19,21 @@
         <img src="~/img/logo5.gif" alt="">
         <div id="account">
             <img src="~/img/user圖片.png" alt="">
-            <input type="password" placeholder=" 請輸入帳號" class="field-input">
+            <input type="password" id="account-input" placeholder=" 請輸入帳號" class="field-input" maxlength="10">
         </div>
         <div id="password">
             <img src="~/img/lock圖片.png" alt="">
-            <input type="password" placeholder=" 請輸入密碼" class="field-input">
+            <input type="password" id="password-input" placeholder=" 請輸入密碼" class="field-input" maxlength="16">
             <label>
-                <input type="checkbox" name="">
+                <input type="checkbox" id="remember-checkbox" name="">
                 記住我
             </label>
         </div>
 
         <div id="captcha">
-            <input type="text" id="" placeholder=" 驗證碼" class="field-input">
-            <img src="~/img/假驗證碼圖片.png" alt="">
+            <input type="text" id="captcha-input" placeholder="請輸入驗證碼" class="field-input">
+            <img src="~/img/假驗證碼圖片.png" alt="驗證碼圖片" id="captcha-img">
+            <img src="~/img/update.gif" alt="更新驗證碼圖片" id="update-captcha-img">
         </div>
 
         <div id="sso">
@@ -40,11 +41,10 @@
             <img src="~/img/google(G)圖片.png" alt="">
             <span>google</span>
         </div>
-        <button class="btn btn-long btn-submit">登入</button>
+        <button id="submit-btn" class="btn btn-long btn-submit">登入</button>
     </div>
-
-    <script src="~/js/login.js"></script>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/login.js" asp-append-version="true"></script>
+    @* <script src="~/lib/jquery/dist/jquery.min.js"></script> *@
 
 </body>
 

@@ -23,8 +23,7 @@ body {
 這個元素內時，樣式才會生效 */
 #loginContainer,
 #loginContainer #account,
-#loginContainer #password,
-#loginContainer #captcha {
+#loginContainer #password {
     display: flex;
     /* 一起設定flex */
 }
@@ -112,7 +111,7 @@ input[type="text"] {
 /* 記住我 position*/
 #password label {
     position: absolute;
-    bottom: -35px;
+    bottom: -20px;
     right: 0px;
     font-size: 12px;
     display: flex;
@@ -122,22 +121,39 @@ input[type="text"] {
 
 }
 
-#loginContainer #captcha {
-    margin-top: 30px;
-    flex-wrap: wrap;
+#captcha {
+    /* margin-top: 100px; */
+    position: relative;
+    box-sizing: border-box;
+    /* background-color: antiquewhite; */
 }
 
+#captcha-img,
+#update-captcha-img {
+    width: auto;
+    position: absolute;
+}
 
-#captcha>img {
-    margin: 0px 10px;
-    width: 150px;
+#captcha-img {
+    height: 35px;
+    top: 5px;
+    right: 40px;
+    border: 1px var(--border-gray) solid;
+    border-radius: 5px;
+
+}
+
+#update-captcha-img {
     height: 100%;
+    top: 0px;
+    right: 0px;
+    border-left: 1px var(--border-gray) solid;
+    border-radius: 0px 5px 5px 0px;
+    box-sizing: border-box;
+
 }
 
 
-#captcha>input {
-    text-align: center;
-}
 
 
 
@@ -166,3 +182,10 @@ input[type="text"] {
     bottom: 20px;
 
 } */
+@media screen and (max-width:640px) {
+    #loginContainer {
+        width: 95%;
+        padding: 10px 10px;
+        /* background-color: #FFFFFF; */
+    }
+}
