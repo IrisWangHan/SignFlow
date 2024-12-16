@@ -21,7 +21,7 @@ public class LoginController : Controller
 
 
     [Description("登入首頁")]
-    [AllowAnonymous]
+    // [AllowAnonymous]
     public IActionResult Index()
     {
         return View();

@@ -29,14 +29,11 @@ submit.addEventListener('click', function () {
         if (valueIsnull(item.value)) {
             resMsg = item.placeholder;
             console.log(resMsg);
-            alert(resMsg);
+            alertBox(resMsg);
             return;  //END
         }
     }
-    var uri = "Login/checkUser"
-    // var data = {
-
-    // }
+    var uri = "/Login/checkUser"
     fetch(uri, {
         method: 'POST',
         headers: {
@@ -52,15 +49,15 @@ submit.addEventListener('click', function () {
         .then(result => {
             if (result.success) {
                 console.log(result);
-                loading.style.display = "flex";
+                createLoadingOverlay();
                 setTimeout(() => {
-                    loading.style.display = "none";
+                    hideLoadingOverlay();
                     window.location.href = result.redirectUrl;
                 }, 2000); // 2秒後隱藏 loading
 
 
             } else {
-                alert(result.message);  // 登入失敗的訊息
+                alertBox(result.message);
             }
         })
         .catch(error => console.error("錯誤:", error));

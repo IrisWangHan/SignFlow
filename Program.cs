@@ -5,13 +5,13 @@ using Microsoft.Extensions.Configuration;
 var builder = WebApplication.CreateBuilder(args);
 
 // 註冊身份驗證服務
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme,
-        options => builder.Configuration.Bind("JwtSettings", options))
-    .AddCookie(options =>
-    {
-        options.LoginPath = "/Login/Index"; // 設定未登入時導向的頁面
-    });
+// builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+//     .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme,
+//         options => builder.Configuration.Bind("JwtSettings", options))
+//     .AddCookie(options =>
+//     {
+//         options.LoginPath = "/Login/Index"; // 設定未登入時導向的頁面
+//     });
 
 // 註冊授權服務
 builder.Services.AddAuthorization();

@@ -12,7 +12,7 @@
 #body-container {
     width: 100%;
     height: 100%;
-    padding: 0px 20px;
+    padding: 20px 20px;
 
     flex-direction: column;
 }
@@ -21,25 +21,27 @@
     width: 90%;
     height: 100%;
     background-color: antiquewhite;
-    padding: 0px 20px;
+    /* padding: 0px 20px; */
 
     flex-direction: column;
+    justify-content: flex-start;
 
 }
 
 .content ul {
     list-style: none;
-    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
     width: 100%;
-    height: 500px;
+    /* height: 500px; */
     background-color: aquamarine;
 }
 
 /* 各下拉選單 */
 .content ul li {
 
-    margin-bottom: 10px;
-    width: 400px;
+    margin: 10px;
+    width: 300px;
     height: 40px;
     display: flex;
     border-radius: 5px;

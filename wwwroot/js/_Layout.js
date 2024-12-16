@@ -6,8 +6,20 @@ navbar.addEventListener('click', function () {
     if (navmenu.style.display === 'flex') {
         navmenu.style.display = 'none';
 
+        if (window.innerWidth < 768) {
+            main.style.display = 'flex';
+            main.style.flex = '1'
+        }
+
     } else {
+        if (window.innerWidth < 768) {
+            main.style.display = 'none';
+            main.style.flex = 'none';
+            navmenu.style.width = '100%';
+
+        }
         navmenu.style.display = 'flex';
+
     }
     // // 檢查螢幕寬度
     // if (window.innerWidth < 768) {
@@ -35,3 +47,4 @@ navbar.addEventListener('click', function () {
     console.log(navmenu);
 
 })
+
