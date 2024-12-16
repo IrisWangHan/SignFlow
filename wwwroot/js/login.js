@@ -51,12 +51,12 @@ submit.addEventListener('click', function () {
         .then(res => res.json())  // 確保回應為 JSON 格式
         .then(result => {
             if (result.success) {
-                
+                console.log(result);
                 loading.style.display = "flex";
                 setTimeout(() => {
                     loading.style.display = "none";
                     window.location.href = result.redirectUrl;
-                }, 10000); // 2秒後隱藏 loading
+                }, 2000); // 2秒後隱藏 loading
 
 
             } else {

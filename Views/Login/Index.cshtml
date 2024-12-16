@@ -17,12 +17,12 @@
 
 <body>
     <div id="loginContainer">
-        <img src="~/img/logo5.gif" alt="">
-        <div id="account">
+        <img src="~/img/logo5.gif" alt="" id="logo-img">
+        <div id="accountContainer">
             <img src="~/img/user圖片.png" alt="">
             <input type="password" id="account-input" placeholder=" 請輸入帳號" class="field-input" maxlength="10">
         </div>
-        <div id="password">
+        <div id="passwordContainer">
             <img src="~/img/lock圖片.png" alt="">
             <input type="password" id="password-input" placeholder=" 請輸入密碼" class="field-input" maxlength="16">
             <label>
@@ -31,18 +31,18 @@
             </label>
         </div>
 
-        <div id="captcha">
+        <div id="captchaContainer">
             <input type="text" id="captcha-input" placeholder="請輸入驗證碼" class="field-input">
             <img src="~/img/假驗證碼圖片.png" alt="驗證碼圖片" id="captcha-img">
             <img src="~/img/update.gif" alt="更新驗證碼圖片" id="update-captcha-img">
         </div>
+        <button id="submit-btn" class="btn btn-long btn-submit">登入</button>
 
-        <div id="sso">
+        <div id="ssoContainer">
             <p>或者使用以下登入:</p>
             <img src="~/img/google(G)圖片.png" alt="">
             <span>google</span>
         </div>
-        <button id="submit-btn" class="btn btn-long btn-submit">登入</button>
     </div>
 
     @* loading *@

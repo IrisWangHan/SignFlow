@@ -19,54 +19,65 @@ body {
 
 
 /* 後代選擇器(空格)
-只有當 #account 元素在 #loginContainer 
+只有當 #account 元素在 #loginContainer
 這個元素內時，樣式才會生效 */
 #loginContainer,
-#loginContainer #account,
-#loginContainer #password {
+#accountContainer,
+#passwordContainer {
     display: flex;
     /* 一起設定flex */
 }
 
 #loginContainer {
-    width: 80%;
-    max-width: 620px;
-    height: auto;
-    padding: 40px 60px;
+    width: 400px;
+    height: 80%;
+    /* max-width: 620px; */
+    /* height: auto; */
+    padding: 0px 40px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background-color: var(--web-blue);
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
     position: relative;
     border: 1px var(--gray-slate) solid;
+    background-color: rgb(249, 247, 245);
+
 }
 
 
 /* logo */
-#loginContainer>img {
+#logo-img {
     width: 100%;
-    max-width: 315px;
+
     /* 限制圖片的最大寬度 */
     height: auto;
+    max-width: 350px;
     /* 高度根據寬度自動調整，保持比例 */
     /* width: 100%; */
-    margin-bottom: 10px;
-    border-radius: 10px 10px 0px 0px;
+    margin: 20px 0px 25px 0px;
+    border-radius: 10px;
 
 }
 
-/* 設定每個 帳號/密碼區塊 
-彈性寬度以外層loginContainer的75%調整 
+/* 設定每個 帳號/密碼區塊
+彈性寬度以外層loginContainer的75%調整
 高度 設計跟input等高 */
-#loginContainer #account,
-#loginContainer #password,
-#loginContainer #captcha,
-#loginContainer #sso {
+#accountContainer,
+#passwordContainer,
+#captchaContainer,
+#ssoContainer {
     width: 100%;
-    height: 45px;
-    margin: 0px 0px 20px 0px;
+    height: 60px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #648dbc; */
 }
 
 
@@ -76,16 +87,15 @@ img {
 
 
 /* 讓小圖片定位 */
-#account,
-#password {
+#accountContainer,
+#passwordContainer {
     position: relative;
     border-radius: 5px;
-    background-color: #FFFFFF;
 }
 
 /* 設定input中的小圖片 */
-#account>img,
-#password>img {
+#accountContainer>img,
+#passwordContainer>img {
     position: absolute;
     height: 25px;
     object-fit: contain;
@@ -97,35 +107,37 @@ img {
 }
 
 /* 設定input  帳號和密碼*/
-input[type="password"] {
+#account-input,
+#password-input {
     padding-left: 40px;
+
     /* 放小圖片預留空間 */
 }
 
 /* 驗證碼 */
-input[type="text"] {
+#captcha-input {
     flex: 1;
 }
 
 
 /* 記住我 position*/
-#password label {
+#passwordContainer label {
     position: absolute;
     bottom: -20px;
     right: 0px;
     font-size: 12px;
     display: flex;
     justify-content: center;
-    color: #FFFFFF;
+    color: #0b0a0a;
     /* top: 0px; */
 
 }
 
-#captcha {
-    /* margin-top: 100px; */
+#captchaContainer {
+    margin-top: 50px;
+    /* 與 記住我 文字分隔 */
     position: relative;
     box-sizing: border-box;
-    /* background-color: antiquewhite; */
 }
 
 #captcha-img,
@@ -135,21 +147,27 @@ input[type="text"] {
 }
 
 #captcha-img {
-    height: 35px;
-    top: 5px;
-    right: 40px;
+    height: 100%;
+    width: 55px;
+    height: 30px;
+    /* padding: 20px 0px; */
+    /* top: 12px;
+    right: 60px; */
     border: 1px var(--border-gray) solid;
     border-radius: 5px;
-
+    right: 35px;
+    /* margin-left: 0 auto; */
 }
 
 #update-captcha-img {
     height: 100%;
     top: 0px;
     right: 0px;
-    border-left: 1px var(--border-gray) solid;
+    /* border-left: 1px var(--border-gray) solid; */
     border-radius: 0px 5px 5px 0px;
     box-sizing: border-box;
+    cursor: pointer;
+    /* background-color: #4a90e2; */
 
 }
 
@@ -158,34 +176,38 @@ input[type="text"] {
 
 
 
-#loginContainer #sso {
-    margin-top: 20px;
-    color: #FFFFFF;
+#ssoContainer {
+    margin: 20px 0px;
+    color: #0b0a0a;
     font-size: 12px;
+    flex-direction: column;
 }
 
-#sso img {
+#ssoContainer img {
     height: 20px;
     display: inline-block;
     /* 讓圖片與文字置於同一行 */
     vertical-align: middle;
+    cursor: pointer;
+
     /* 讓圖片跟文字上下置中 */
 }
 
-#sso span {
+#ssoContainer span {
     vertical-align: middle;
     /* 讓圖片跟文字上下置中 */
 }
 
-/* button {
-    position: fixed;
-    bottom: 20px;
+#submit-btn {
+    margin-top: 25px;
+}
 
-} */
 @media screen and (max-width:640px) {
     #loginContainer {
-        width: 95%;
-        padding: 10px 10px;
+        width: 90%;
+        padding: 0px 10px;
+        /* background-color: #4a90e2; */
         /* background-color: #FFFFFF; */
     }
+
 }

@@ -48,7 +48,7 @@ public class LoginController : Controller
         {
             return Json(new { success = true, message = "登入成功", redirectUrl = Url.Action("Index", "Index") });
         }
-        return Json(new { success = true, message = "登入失敗" });
+        return Json(new { success = false, message = "登入失敗" });
 
     }
 
