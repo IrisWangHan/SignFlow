@@ -5,6 +5,8 @@ var password = document.querySelector('#password-input');
 var remember_checkbox = document.querySelector('#remember-checkbox');
 var captcha = document.querySelector('#captcha-input');
 
+var loading = document.querySelector('#loading-overlay');
+
 submit.addEventListener('click', function () {
 
     let listArray = [];
@@ -48,9 +50,15 @@ submit.addEventListener('click', function () {
     })
         .then(res => res.json())  // 確保回應為 JSON 格式
         .then(result => {
-            console.log(result); // 顯示返回的結果
             if (result.success) {
-                alert(result.message);  // 登入成功的訊息
+                
+                loading.style.display = "flex";
+                setTimeout(() => {
+                    loading.style.display = "none";
+                    window.location.href = result.redirectUrl;
+                }, 10000); // 2秒後隱藏 loading
+
+
             } else {
                 alert(result.message);  // 登入失敗的訊息
             }

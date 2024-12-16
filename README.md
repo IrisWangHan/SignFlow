@@ -8,6 +8,12 @@
 - 自行建立每個階段簽核流程
 - 針對管理者權限提供初始設定
 - 基於資料庫已有使用者帳密資料
+- 單一職責原則(只負責一類事情)
+- 【Model】放資料結構
+- 【Repository】DB存取 
+        (介面)定義可使用的DB方法
+- 【Service】處理邏輯
+- 【Controller】HTTP
 
 ## Tech Stack
 - Frontend: js,css,html

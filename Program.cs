@@ -1,4 +1,16 @@
+using Microsoft.Extensions.Configuration;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// 使用 builder.Configuration 來讀取資料庫連接字串
+// string connectionString = builder.Configuration.GetConnectionString("DBContext");
+
+// 註冊資料庫連接字串為單例
+// builder.Services.AddSingleton(connectionString); // 註冊 Repository 和 介面IRepository
+builder.Services.AddScoped<IUsersRepository, UsersRepository>();
+builder.Services.AddScoped<IDatabaseRepository, DatabaseRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
+
 
 // Add services to the container.
 if (builder.Environment.IsDevelopment())
