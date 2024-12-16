@@ -1,6 +1,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SignFlow.Models;//Description
 
@@ -20,6 +21,7 @@ public class LoginController : Controller
 
 
     [Description("登入首頁")]
+    [AllowAnonymous]
     public IActionResult Index()
     {
         return View();
@@ -44,7 +46,7 @@ public class LoginController : Controller
         success = _userService.AuthenticateUser(loginRequest.帳號, loginRequest.密碼);
         if (success)
         {
-            return Json(new { success = true, message = "登入成功", redirectUrl = Url.Action("Index", "Index")  });
+            return Json(new { success = true, message = "登入成功", redirectUrl = Url.Action("Index", "Index") });
         }
         return Json(new { success = true, message = "登入失敗" });
 
